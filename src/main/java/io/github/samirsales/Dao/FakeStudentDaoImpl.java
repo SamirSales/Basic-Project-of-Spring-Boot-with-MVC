@@ -1,6 +1,7 @@
 package io.github.samirsales.Dao;
 
 import io.github.samirsales.Entity.Student;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
@@ -8,6 +9,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Repository
+@Qualifier("fakeData")
 public class FakeStudentDaoImpl implements StudentDao {
 
     private static Map<Integer, Student> students;
